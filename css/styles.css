@@ -1,0 +1,307 @@
+/* 
+  Main stylesheet for Threads for Tomorrow.
+  Colour palette inspired by earthy sustainable fashion tones:
+  cream (#EFEFE9), beige (#E8D9CD), brown (#523D35), muted green (#959D90).
+*/
+
+/* Basic reset for consistent spacing across browsers */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global page styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #EFEFE9;
+  color: #523D35;
+  line-height: 1.6;
+}
+
+/* Reusable page width container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header and navigation */
+.site-header {
+  background-color: #EFEFE9;
+  border-bottom: 1px solid #E8D9CD;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #523D35;
+  text-decoration: none;
+  line-height: 1.1;
+}
+
+.logo span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #959D90;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #523D35;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #959D90;
+}
+
+/* Buttons and hover effects */
+.btn {
+  display: inline-block;
+  background-color: #959D90;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: scale(1.06);
+  background-color: #7E887B;
+  box-shadow: 0 10px 20px rgba(82, 61, 53, 0.18);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #523D35;
+  border: 2px solid #959D90;
+}
+
+.btn-outline:hover {
+  background-color: #959D90;
+  color: #ffffff;
+}
+
+/* Hero sections */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  align-items: center;
+  padding: 68px 0;
+}
+
+.hero-text h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 3.4rem;
+  line-height: 1.05;
+  margin-bottom: 18px;
+}
+
+.hero-text p {
+  font-size: 1.05rem;
+  max-width: 480px;
+  margin-bottom: 24px;
+}
+
+.hero-image img,
+.image-card img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 35px rgba(82, 61, 53, 0.16);
+}
+
+/* Shared section styles */
+.section {
+  padding: 62px 0;
+}
+
+.section.alt {
+  background-color: #E8D9CD;
+}
+
+.section-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.1rem;
+  margin-bottom: 10px;
+}
+
+.section-intro {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+/* Cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card-grid.four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.55);
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(82, 61, 53, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 25px rgba(82, 61, 53, 0.13);
+}
+
+.card .icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+}
+
+/* Statistics */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.stat {
+  text-align: center;
+  padding: 24px;
+  background-color: #EFEFE9;
+  border-radius: 16px;
+  border: 1px solid rgba(82, 61, 53, 0.12);
+}
+
+.stat strong {
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+/* Two-column content block */
+.split {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 38px;
+  align-items: center;
+}
+
+/* Timeline for action/about pages */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.timeline-item {
+  border-top: 3px solid #959D90;
+  padding-top: 14px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #523D35;
+  color: #EFEFE9;
+  padding: 36px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 24px;
+}
+
+.site-footer a {
+  color: #EFEFE9;
+  display: block;
+  margin-top: 6px;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #E8D9CD;
+}
+
+/* Simple fade-in animation for main content */
+.fade-in {
+  animation: fadeIn 0.7s ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive fallback so the site still works on smaller screens */
+@media (max-width: 850px) {
+  .hero,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid,
+  .card-grid.four,
+  .stats,
+  .timeline,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 18px 0;
+    gap: 14px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+}
